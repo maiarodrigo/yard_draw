@@ -1,0 +1,53 @@
+body { 
+    margin: 0; 
+    padding: 0;
+}
+
+canvas {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.controls{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    float:left; 
+}
+
+.create_blocks { 
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    float:left;
+
+}
+
+.create_blocks span{
+    margin-right: 10px;
+}
+
+.info_blocks{
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    float:left;
+    border: 1px solid black;
+
+}
+
+
+.info_blocks .subbox{
+    border: 1px solid black;
+    padding-bottom: 5px;
+    float:left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+.info_blocks span{
+    margin-right: 5px;
+}
+

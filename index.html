@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <htmls> <!--<![endif]-->
+
+
+	
+
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DRAW</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css\style.css">
+
+
+    </head>
+    <body>
+		
+      <canvas id="yard_drawing" width="1900" height="700"></canvas>
+
+    
+      <div class="controls">
+        <p>
+          <button id="copy" onclick="Copy()">Copy Selected Objects</button>
+        </p>
+        <p>
+          <button id="paste" onclick="Paste()">Paste Selected Objects</button>
+        </p>
+        <p>
+          <button id="delete" onclick="deleteSelectedObjectsFromCanvas()">delete</button>
+        </p>
+        <p>
+          <button id="reset_zoom" onclick="ResetZoom()">Reset Zoom</button>
+        </p>
+        <p>
+          <button id="to_svg_button">Export SVG</button>
+          <a download="yard.svg" id="downloadlink" style="display: none">Download SVG</a>
+
+
+          <button id="to_json_button">Export JSON</button>
+          <a download="yard.json" id="downloadlink_json" style="display: none">Download Json</a>
+
+          <button id="to_json_button" onclick="custom_svg()">CUSTOM JSON</button>
+          
+
+        </p>
+        <p>
+          <button id="ungroup" onclick="Ungroup()">Ungroup</button>
+        </p>
+      </div>
+
+      <div class="create_blocks">
+        
+        <span>stacks ( Horizontal )</span><input type="number" id="blocks_horizontal"/>
+        <br><br>
+        <span>stacks ( Vertical )</span><input type="number" id="blocks_vertical"/>
+        <br><br>
+        <button id="create_block" onclick="create_block()">Create Block</button>
+
+      </div>
+
+      <div class="info_blocks">
+        <span>Block Name:</span><input type="text" id="block_name"/>
+        
+        <br><br>
+        
+        <div class="subbox">
+          <b>Bays</b>   
+          <br>
+          <span>Naming:</span>
+          <select id="bays_naming" name="bays_naming">
+            <option value="number">Number</option>
+            <option value="odd_even_number">Even/Odd Numbers</option>
+            <option value="letter">Letters</option>
+          </select>
+          <br>
+          <span>Ordering:</span>
+          <select id="bays_ordering" name="bays_ordering">
+            <option value="lr">Left to Right</option>
+            <option value="rl">Right to Left</option>
+          </select>
+          <br>
+          <span>Initial Value:</span>
+          <input type="text" id="bays_initial"/>
+        
+        </div>
+        
+        <div class="subbox">
+          <b>Rows</b>
+          <br>
+          <span>Naming:</span>
+          <select id="rows_naming">
+            <option value="letter">Letters</option>
+            <option value="number">Number</option>
+            <option value="odd_even_number">Even/Odd Numbers</option>
+          </select>
+          <br>
+          <span>Ordering:</span> 
+            <select  type="text" id="rows_ordering">
+              <option value="tb">Top to Bottom</option>
+              <option value="bt">Bottom to Top</option>
+            </select>
+          <br>
+          <span>Initial Value:</span>
+          <input type="text" id="rows_initial"/>
+        </div>
+        <br>
+
+        <button id="create_info_blocks" onclick="create_info_blocks()">Set Metadata</button>
+        
+      </div>
+    
+      <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+      <script src="js\vendor\fabric.min.js"></script>
+      <script src="js\vendor\underscore-min.js"></script>
+      <script src="js\functions.js"></script>
+      <script src="js\custom_to_svg.js"></script>
+      <script src="js\yard.js"></script>
+    </body>
+</htmls>
+
+
+
